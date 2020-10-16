@@ -1,0 +1,185 @@
+@font-face{
+    font-family: twiggy;
+    src: url(fonts/twiggy-regular-webfont.woff) format('woff');
+    src: url(fonts/twiggy-regular-webfont.woff2) format('woff2');
+}
+@font-face{
+    font-family: dosis_light;
+    src: url(fonts/dosis-light-webfont.woff) format('woff');
+    src: url(fonts/dosis-light-webfont.woff2) format('woff2');
+}
+@font-face{
+    font-family: dosis_med;
+    src: url(fonts/dosis-medium-webfont.woff) format('woff');
+    src: url(fonts/dosis-medium-webfont.woff2) format('woff2');
+}
+@font-face{
+    font-family: dosis_bold;
+    src: url(fonts/dosis-bold-webfont.woff) format('woff');
+    src: url(fonts/dosis-bold-webfont.woff2) format('woff2');
+}
+
+html, body {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--lightpurple: #ebddf7;
+	--purple: #622897;
+	--darkgreen: #646828;
+	--green: #96a15f;
+	--lightgreen: #dfe0b0;
+	--lightbrown: #bfaa61;
+	--brown: #795d3f;
+	--darkbrown: #463727;
+}
+
+#portrait{
+	margin: auto;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+img{
+	display: block;
+}
+/*
+#portrait img{
+	display: block;
+	max-width: 80%;
+	margin: auto;
+	padding-top: 15%;
+}
+#landscape img{
+	display: block;
+	max-width: 80%;
+	margin: auto;
+}
+**/
+h1{
+	margin: 3rem auto 2rem;
+	text-align: center;
+}
+
+.twiggy{
+	font-family: 'twiggy';
+	font-size: 2.7em;
+	color: var(--darkbrown);
+}
+.head{
+	font-family: 'dosis_bold';
+	font-size: 1.5rem;
+	color: var(--darkbrown);
+	margin: 2rem 2rem 0;
+}
+.home_p{
+	font-family: 'dosis_med';
+	font-size: 1.15rem;
+	color: var(--darkbrown);
+	margin: 1rem 2rem 0;
+}
+.bold{
+	font-family: 'dosis_bold';
+	font-size: 1.25rem;
+	color: var(--darkbrown);
+}
+
+/* PORTRAIT BROWSER **/
+.truck{
+	width: 100px;
+}
+.rotating_recycle{
+
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 3000ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 3000ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 3000ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+	
+	animation-name: spin;
+	animation-duration: 3000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	}
+	@-ms-keyframes spin {
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(1080deg); }
+	}
+	@-moz-keyframes spin {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(1080deg); }
+	}
+	@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(1080deg); }
+	}
+	@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+.truck_driving{
+	margin: 2rem 0;
+	animation-name: truck;
+    animation-duration: 3s;
+    animation-iteration-count: 1000;
+}
+@keyframes truck {
+    0% {
+      left: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      left: 100%;
+      transform: translateX(100%);
+    }
+}
+@media screen and (orientation:portrait){
+	#landscape{
+		display: none;
+	}
+	#portrait{
+		display: block;
+	}
+	body {
+		background-color:var(--green);
+	}
+	.rotating_recycle{
+		width: 60px;
+		padding: 1rem;
+		margin: 0;
+	}
+}
+@media screen and (orientation:landscape){
+	#landscape{
+		display: block;
+	}
+	#portrait{
+		display: none;
+	}
+	body {
+		background-color:var(--lightpurple);
+		width: 100%;
+	}
+	.head{
+		margin: 6rem auto 0;
+		max-width: 370px;
+	}
+	/* PORTRAIT BROWSER **/
+	.rotating_recycle{
+		width: 100px;
+		margin: 2rem auto;
+	}
+}
