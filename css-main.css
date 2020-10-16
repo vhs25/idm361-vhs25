@@ -36,6 +36,9 @@ html, body {
 	--darkbrown: #463727;
 }
 
+
+/* BROWSER  SCREEN**/
+
 #portrait{
 	margin: auto;
 	height: 100vh;
@@ -45,21 +48,8 @@ html, body {
 img{
 	display: block;
 }
-/*
-#portrait img{
-	display: block;
-	max-width: 80%;
-	margin: auto;
-	padding-top: 15%;
-}
-#landscape img{
-	display: block;
-	max-width: 80%;
-	margin: auto;
-}
-**/
 h1{
-	margin: 5rem auto 1rem;
+	margin: 3rem auto 2rem;
 	text-align: center;
 }
 
@@ -86,7 +76,49 @@ h1{
 	color: var(--darkbrown);
 }
 
-/* PORTRAIT BROWSER **/
+
+
+
+/* MEDIA QUERIES **/
+@media screen and (orientation:portrait){
+	#landscape{
+		display: none;
+	}
+	#portrait{
+		display: block;
+	}
+	body {
+		background-color:var(--green);
+	}
+	.rotating_recycle{
+		width: 60px;
+		padding: 1rem;
+		margin: 0;
+	}
+}
+@media screen and (orientation:landscape){
+	#landscape{
+		display: block;
+	}
+	#portrait{
+		display: none;
+	}
+	body {
+		background-color:var(--lightpurple);
+		width: 100%;
+	}
+	.head{
+		margin: 6rem auto 0;
+		max-width: 370px;
+	}
+	/* PORTRAIT BROWSER **/
+	.rotating_recycle{
+		width: 100px;
+		margin: 2rem auto;
+	}
+}
+
+/* ANIMATIONS **/
 .truck{
 	width: 100px;
 }
@@ -132,8 +164,9 @@ h1{
 }
 .truck_driving{
 	animation-name: truck;
-    animation-duration: 4s;
-    animation-iteration-count: 1000;
+    animation-duration: 3s;
+	animation-iteration-count: 1000;
+	margin: 2rem 0;
 }
 @keyframes truck {
     0% {
@@ -144,41 +177,4 @@ h1{
       left: 100%;
       transform: translateX(100%);
     }
-}
-@media screen and (orientation:portrait){
-	#landscape{
-		display: none;
-	}
-	#portrait{
-		display: block;
-	}
-	body {
-		background-color:var(--green);
-	}
-	.rotating_recycle{
-		width: 60px;
-		padding: 1rem;
-		margin: 0;
-	}
-}
-@media screen and (orientation:landscape){
-	#landscape{
-		display: block;
-	}
-	#portrait{
-		display: none;
-	}
-	body {
-		background-color:var(--lightpurple);
-		width: 100%;
-	}
-	.head{
-		margin: 6rem auto 0;
-		max-width: 370px;
-	}
-	/* PORTRAIT BROWSER **/
-	.rotating_recycle{
-		width: 100px;
-		margin: 2rem auto;
-	}
 }
