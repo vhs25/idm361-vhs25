@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shipback</title>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--Status Bar-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!--Make App Title different from web page title-->
+	<meta name="apple-mobile-web-app-title" content="Shipback">
+	<!--Disabel auto phone # detection (?)-->
+	<meta name="format-detection" content="telephone=no">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+	<link rel="stylesheet" href="css-add2home.css">
+	<link rel="stylesheet" href="css-main.css">
+
+	<!--iPhones-->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/shipback_app_icon_180.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/shipback_app_icon_114.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/shipback_app_icon_57.png">
+	
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+
+	<div id="portrait">
+		<h1 class="twiggy">Welcome to ShipBack!</h1>
+		<p class="home_p"><b class="bold">Discover</b>  an idea that will  <b class="bold">limit waste</b>  in the shipping indistry!</p>
+		<div class="truck_driving">
+			<img class="rotating_recycle" src="images/recycle.png" alt="Recycle Symbol">
+			<img class="truck" src="images/truck.png">
+		</div>
+	</div>
+	<div id="landscape">
+		<h2 class="head">For the best experience, please rotate your phone back to portrait.</h2>
+		<img class="rotating_recycle" src="images/recycle.png" alt="Recycle Symbol">
+	</div>
+
+
+
+
+
+
+<!-- JAVASCRIPT-->
+	<script type="text/javascript">
+	//Custom config setting BEFORE a2h js file
+	var addToHomeConfig=({
+		touchIcon: true
+	})
+	</script>
+	<script src="js-add2home.js"></script>
+	<script src="js-main.js"></script>
+</body>
+
+</html>
