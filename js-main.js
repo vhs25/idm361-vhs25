@@ -5,8 +5,8 @@ var modal_close = document.getElementById("modal_close");
 var modal = document.getElementById("modal");
 var modal_next = document.getElementById("modal_next");
 var modal_done = document.getElementById("modal_done");
-var modal_step = document.getElementById("modal_step");
-var modal_q = document.getElementById("modal_q");
+var modal_step = document.getElementById("modal_step").innerHTML;
+var modal_q = document.getElementById("modal_q").innerHTML;
 
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Navigator
@@ -27,6 +27,8 @@ else{
 // When the user clicks on the button, open the modal
   modal_open.onclick = function() {
     modal.style.display = "block";
+    modal_step = "Step 1";
+    console.log(modal_step)
   }
 // When the user clicks on <span> (x), close the modal
   modal_close.onclick = function() {
@@ -39,3 +41,19 @@ else{
     }
   }
 
+
+// UPDATE STEPS INFO
+modal_next.addEventListener('click', event =>{
+    handleNext(event);
+});
+
+function handleNext(){
+    if(modal_step==='Step 1'){
+        modal_step = "Step 2"
+        console.log(modal_step)
+    }
+    else if(modal_step==='Step 1'){
+        modal_step = "Step 3"
+    }
+
+}

@@ -99,7 +99,7 @@ p{
 	padding: 0 1.25rem;
 	background-color: var(--brown);
 	width: 80%;
-	height: 350px;
+	height: 400px;
 	position: fixed;
 	z-index: 1;
 	left: 10%;
@@ -145,6 +145,7 @@ p{
 #modal p{
 	color: var(--lightgreen);
 	margin-right: 0;
+	padding: 1rem 0;
 }
 #modal_img{
 	/* Make each image 76pc tall!! **/
