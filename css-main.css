@@ -64,7 +64,7 @@ h1{
 	color: var(--darkbrown);
 	margin: 2rem 2rem 0;
 }
-.home_p{
+p{
 	font-family: 'dosis_med';
 	font-size: 1.15rem;
 	color: var(--darkbrown);
@@ -76,6 +76,81 @@ h1{
 	color: var(--darkbrown);
 }
 
+/**** APP *****/
+
+#modal_open{
+	padding: 1rem;
+	background-color: var(--brown);
+	font: 1rem 'dosis_med';
+	color: var(--lightgreen);
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	border-radius: 1rem;
+	border: 3px solid var(--lightgreen);
+	box-shadow: 3px 3px 2px var(--darkbrown);
+}
+#modal_open:active{
+	background-color: var(--darkbrown);
+	box-shadow: none;
+}
+#modal{
+	box-sizing: border-box;
+	padding: 0 1.25rem;
+	background-color: var(--brown);
+	width: 80%;
+	height: 350px;
+	position: fixed;
+	z-index: 1;
+	left: 10%;
+	top: 170px;
+	border-radius: 1rem;
+	border: 3px solid var(--lightgreen);
+	box-shadow: 4px 4px 8px var(--darkbrown);
+
+	display: none;
+}
+#modal_close{
+	background-color: transparent;
+	border: none;
+	color: var(--lightgreen);
+	font: 1.25em 'dosis_light';
+	padding: 0;
+	float: right;
+}
+#modal_next, #modal_done{
+	position: absolute;
+	bottom:   0;
+	width: 50%;
+	padding: .8rem 0;
+	background-color: var(--lightgreen);
+	border: none;
+	font: 1.3rem 'dosis_light';
+}
+#modal_next{
+	right: 0;
+	border-radius: 0 0 .8rem 0;
+}
+#modal_done{
+	left: 0;
+	border-radius: 0 0 0 .8rem;
+	border-right: 1.5px solid var(--brown);
+}
+#modal h2{
+	padding: 1.25rem 0 0;
+	font: 2rem 'twiggy';
+	margin: 0;
+	color: var(--lightgreen);
+}
+#modal p{
+	color: var(--lightgreen);
+	margin-right: 0;
+}
+#modal_img{
+	/* Make each image 76pc tall!! **/
+	max-width: 50%;
+	margin: 2rem auto 0;
+}
 
 
 
