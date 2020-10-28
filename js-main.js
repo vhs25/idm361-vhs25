@@ -11,15 +11,15 @@ var modal_q = document.getElementById("modal_q").innerHTML;
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Navigator
 
-if(Navigator.standalone){
+if(window.navigator.standalone){
     console.log('yes')
-    browser.style.display = "block";
-    app.style.display = "none";
+    browser.style.display = "none";
+    app.style.display = "block";
 }
 else{
     console.log('no')
-    browser.style.display = "none";
-    app.style.display = "block";
+    browser.style.display = "block";
+    app.style.display = "none";
 }
 
 // MODAL -- https://www.w3schools.com/howto/howto_css_modals.asp
@@ -42,7 +42,7 @@ else{
   }
 
 
-// UPDATE STEPS INFO
+// UPDATE STEPS CONTENT -- https://www.w3schools.com/js/js_htmldom_html.asp
 modal_next.addEventListener('click', event =>{
     handleNext(event);
 });
