@@ -1,0 +1,36 @@
+CACHE MANIFEST
+# version - 1.0
+
+CACHE:
+
+# CSS
+css-add2home.css
+css-main.css
+css-normalize.css
+
+# IMAGES
+images/box_closed.png
+images/box_open.png
+images/mobile_map.png
+images/mobile_map_closed.png
+images/mobile_map_open.png
+images/recycle.png
+images/shipback_app_icon.png
+images/shipback_app_icon_114.png
+images/shipback_app_icon_180.png
+images/shipback_app_icon_57.png
+images/shipback_icon.png
+images/truck.png
+
+# HTML FILES
+index.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js-refresh-manifest.js
+js-add2home.js
+js-main.js
+
+
+## Any resources not listed above will require the user to be online.
+NETWORK:
+*

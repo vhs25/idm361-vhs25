@@ -109,7 +109,7 @@ h1{
 	}
 	.head{
 		margin: 6rem auto 0;
-		max-width: 370px;
+		max-width: 400px;
 	}
 	/* PORTRAIT BROWSER **/
 	.rotating_recycle{
@@ -118,7 +118,12 @@ h1{
 	}
 }
 
-/* ANIMATIONS **/
+/* ANIMATIONS 
+
+https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right
+http://jsfiddle.net/gaby/9Ryvs/7/ 
+**/
+
 .truck{
 	width: 100px;
 }
