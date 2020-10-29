@@ -18,8 +18,8 @@ if(window.navigator.standalone){
 }
 else{
     console.log('no')
-    browser.style.display = "block";
-    app.style.display = "none";
+    browser.style.display = "none"; //block
+    app.style.display = "block";  //none
 }
 
 // MODAL -- https://www.w3schools.com/howto/howto_css_modals.asp
@@ -42,18 +42,39 @@ else{
   }
 
 
+
 // UPDATE STEPS CONTENT -- https://www.w3schools.com/js/js_htmldom_html.asp
 modal_next.addEventListener('click', event =>{
     handleNext(event);
 });
 
+//LOOP
 function handleNext(){
+  do{
     if(modal_step==='Step 1'){
-        modal_step = "Step 2"
-        console.log(modal_step)
+        modal_step = "Step 2";
+        document.getElementById("modal_step").innerHTML = "Step 2";
+        document.getElementById("modal_q").innerHTML = "Collapse and fold your box."
+        console.log(modal_step);
     }
-    else if(modal_step==='Step 1'){
-        modal_step = "Step 3"
+    else if(modal_step==='Step 2'){
+        modal_step = "Step 3";
+        document.getElementById("modal_step").innerHTML = "Step 3";
+        document.getElementById("modal_q").innerHTML = "Have you found your drop box location?"
+        console.log(modal_step);
     }
-
+    else if(modal_step==='Step 3'){
+      modal_step = "Done";
+      document.getElementById("modal_step").innerHTML = "Done";
+      document.getElementById("modal_q").innerHTML = "Your box is ready to be returned!"
+      console.log(modal_step);
+    }
+    else(){
+      modal_step = "Step 1";
+      document.getElementById("modal_step").innerHTML = "Step 1";
+      document.getElementById("modal_q").innerHTML = "Is your box damaged?"
+      console.log(modal_step);
+    }
+  }
+  while(modal_step==='Step 1');
 }
