@@ -28,6 +28,10 @@ else{
   modal_open.onclick = function() {
     modal.style.display = "block";
     modal_step = "Step 1";
+    document.getElementById("modal_step").innerHTML = "Step 1";
+    document.getElementById("modal_q").innerHTML = "Is your box damaged?"
+    document.getElementById("modal_next").innerHTML = "no";
+    document.getElementById("modal_done").innerHTML = "yes";
     console.log(modal_step)
   }
 // When the user clicks on <span> (x), close the modal
@@ -54,27 +58,75 @@ function handleNext(){
     if(modal_step==='Step 1'){
         modal_step = "Step 2";
         document.getElementById("modal_step").innerHTML = "Step 2";
-        document.getElementById("modal_q").innerHTML = "Collapse and fold your box."
+        document.getElementById("modal_q").innerHTML = "Have you collapsed your box?"
+        document.getElementById("modal_next").innerHTML = "yes";
+        document.getElementById("modal_done").innerHTML = "no";
         console.log(modal_step);
     }
     else if(modal_step==='Step 2'){
         modal_step = "Step 3";
         document.getElementById("modal_step").innerHTML = "Step 3";
         document.getElementById("modal_q").innerHTML = "Have you found your drop box location?"
+        document.getElementById("modal_next").innerHTML = "yes";
+        document.getElementById("modal_done").innerHTML = "no";
         console.log(modal_step);
     }
     else if(modal_step==='Step 3'){
       modal_step = "Done";
       document.getElementById("modal_step").innerHTML = "Done";
       document.getElementById("modal_q").innerHTML = "Your box is ready to be returned!"
+      document.getElementById("modal_next").innerHTML = "Next Box"
+      document.getElementById("modal_done").innerHTML = "Done";
       console.log(modal_step);
     }
-    else(){
+    else if(modal_step==='Done'){
       modal_step = "Step 1";
       document.getElementById("modal_step").innerHTML = "Step 1";
       document.getElementById("modal_q").innerHTML = "Is your box damaged?"
+      document.getElementById("modal_next").innerHTML = "no";
+      document.getElementById("modal_done").innerHTML = "yes";
       console.log(modal_step);
     }
   }
   while(modal_step==='Step 1');
+}
+
+
+// NO BUTTON
+modal_done.addEventListener('click', event =>{
+  handleDone(event);
+});
+
+function handleDone(){
+  do{
+    if(modal_step==='Step 1'){
+        modal_step = "Done";
+        document.getElementById("modal_step").innerHTML = "Sorry,";
+        document.getElementById("modal_q").innerHTML = "Your box is not fit for return. Instead, please recycle your cardboard!"
+        document.getElementById("modal_next").innerHTML = "Next Box";
+        document.getElementById("modal_done").innerHTML = "Done";
+        console.log(modal_step);
+    }
+    else if(modal_step==='Step 2'){
+      modal_step = "Step 2";
+      document.getElementById("modal_step").innerHTML = "Before Returning,";
+      document.getElementById("modal_q").innerHTML = "please collapse and fold your box."
+      document.getElementById("modal_next").innerHTML = "It's Collapsed";
+      document.getElementById("modal_done").innerHTML = "Done";
+      console.log(modal_step);
+  }
+  else if(modal_step==='Step 3'){
+    modal_step = "Done";
+    document.getElementById("modal_step").innerHTML = "Find your location!";
+    document.getElementById("modal_q").innerHTML = "Soon, a map will be available to help you find your local drop box."
+    document.getElementById("modal_next").innerHTML = "Next Box";
+    document.getElementById("modal_done").innerHTML = "Done";
+    console.log(modal_step);
+}
+    else if(modal_step==='Done'){
+        modal_step = "Done";
+        modal.style.display = "none";
+    }
+  }
+    while(modal_step==='Step 1');
 }
