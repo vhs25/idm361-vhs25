@@ -7,11 +7,12 @@ var modal_next = document.getElementById("modal_next");
 var modal_done = document.getElementById("modal_done");
 var modal_step = document.getElementById("modal_step").innerHTML;
 var modal_q = document.getElementById("modal_q").innerHTML;
+var modal_img = document.getElementById("modal_img").innerHTML;
 
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Navigator
 
-if(window.navigator.standalone){
+if(window.navigator.standalone){8
     console.log('yes')
     browser.style.display = "none";
     app.style.display = "block";
@@ -54,13 +55,13 @@ modal_next.addEventListener('click', event =>{
 
 //LOOP
 function handleNext(){
-  do{
     if(modal_step==='Step 1'){
         modal_step = "Step 2";
         document.getElementById("modal_step").innerHTML = "Step 2";
         document.getElementById("modal_q").innerHTML = "Have you collapsed your box?"
         document.getElementById("modal_next").innerHTML = "yes";
         document.getElementById("modal_done").innerHTML = "no";
+        document.getElementById("modal_img").src = "images/box_collapsed.png";
         console.log(modal_step);
     }
     else if(modal_step==='Step 2'){
@@ -69,6 +70,7 @@ function handleNext(){
         document.getElementById("modal_q").innerHTML = "Have you found your drop box location?"
         document.getElementById("modal_next").innerHTML = "yes";
         document.getElementById("modal_done").innerHTML = "no";
+        document.getElementById("modal_img").src = "images/mailbox.png";
         console.log(modal_step);
     }
     else if(modal_step==='Step 3'){
@@ -77,6 +79,7 @@ function handleNext(){
       document.getElementById("modal_q").innerHTML = "Your box is ready to be returned!"
       document.getElementById("modal_next").innerHTML = "Next Box"
       document.getElementById("modal_done").innerHTML = "Done";
+      document.getElementById("modal_img").src = "images/box_check.png";
       console.log(modal_step);
     }
     else if(modal_step==='Done'){
@@ -85,11 +88,10 @@ function handleNext(){
       document.getElementById("modal_q").innerHTML = "Is your box damaged?"
       document.getElementById("modal_next").innerHTML = "no";
       document.getElementById("modal_done").innerHTML = "yes";
+      document.getElementById("modal_img").src = "images/box_dirty.png";
       console.log(modal_step);
     }
   }
-  while(modal_step==='Step 1');
-}
 
 
 // NO BUTTON
@@ -108,7 +110,7 @@ function handleDone(){
         console.log(modal_step);
     }
     else if(modal_step==='Step 2'){
-      modal_step = "Step 2";
+      modal_step = "Done";
       document.getElementById("modal_step").innerHTML = "Before Returning,";
       document.getElementById("modal_q").innerHTML = "please collapse and fold your box."
       document.getElementById("modal_next").innerHTML = "It's Collapsed";
@@ -124,7 +126,6 @@ function handleDone(){
     console.log(modal_step);
 }
     else if(modal_step==='Done'){
-        modal_step = "Done";
         modal.style.display = "none";
     }
   }
