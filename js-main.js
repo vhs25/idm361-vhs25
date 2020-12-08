@@ -19,8 +19,8 @@ if(window.navigator.standalone){8
 }
 else{
     console.log('no')
-    browser.style.display = "none"; //block
-    app.style.display = "block";  //none
+    browser.style.display = "block"; //block
+    app.style.display = "none";  //none
 }
 
 // MODAL -- https://www.w3schools.com/howto/howto_css_modals.asp

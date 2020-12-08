@@ -89,7 +89,8 @@ p{
 /**** APP *****/
 .top_green{
 	background-color: var(--green);
-	padding-bottom: 3rem
+	padding-bottom: 3rem;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 65% 100%, 35% 100%, 0 85%);
 }
 #modal_open{
 	padding: 1rem;
@@ -184,28 +185,36 @@ p{
 	height: 100;
 	position: relative;
 	text-align: center;
+	clip-path: polygon(35% 0, 65% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+	padding-top: 3rem;
+	margin-top: 4rem;
 }
 .why_shipback_img{
-	margin: 3rem auto 0;
+	margin: 0 auto 0;
 	max-width: 90%;
-	padding: 2rem 0;
+	padding: 1rem 0 2rem;
 }
 .why_shipback_txt{
 	position: absolute;
-	top: 60px;
+	top: 92px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: 0;
 	width: 100%;
 	padding-top: 2rem;
+	font-size: 1.8rem;
 }
 .why_shipback_p{
 	text-align: left;
-	padding: 0 0 3rem;
+	padding: 0 0 3rem;	
+	margin: 0 2rem;
 }
 .why_shipback_p p{
-	color: rgba(255, 255, 255, 0.838);
+	color: var(--darkbrown);
 	font-size: 1rem;
+	background-color: var(--lightbrown);
+	margin: 0 auto;
+	padding: 1rem;	
 }
 
 /* MEDIA QUERIES **/
