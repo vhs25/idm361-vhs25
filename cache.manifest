@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version - 2.9
+# version - 3
 
 CACHE:
 
@@ -9,8 +9,14 @@ css-main.css
 css-normalize.css
 
 # IMAGES
+images/box_check.png
 images/box_closed.png
+images/box_collapsed.png
+images/box_dirty copy.png
+images/box_dirty.png
 images/box_open.png
+images/cox_collapsed.jpg
+images/mailbox.png
 images/mobile_map.png
 images/mobile_map_closed.png
 images/mobile_map_open.png
@@ -21,6 +27,7 @@ images/shipback_app_icon_180.png
 images/shipback_app_icon_57.png
 images/shipback_icon.png
 images/truck.png
+images/why_shipback.png
 
 # HTML FILES
 index.html
